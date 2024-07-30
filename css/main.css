@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  width: 340px;
+  background-color: white;
+  min-height: 90vh;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.right {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(228, 228, 228);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px;
+  overflow-y: scroll;
+}
+
+.myId {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 40px 0;
+}
+
+.myId > div {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  padding: 3px;
+}
+
+.myId > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+.myId > span > h2 {
+  font-size: 24px;
+}
+
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: darkolivegreen;
+}
+
+.left > h3 {
+  font-size: 30px;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.left > ul {
+  width: 100%;
+  list-style: none;
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+.left > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 30px;
+}
+.colorRed {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: crimson;
+}
+.colorYellow {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: yellow;
+}
+
+.colorGreen {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: forestgreen;
+}
+.colorEmpty {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 1px solid;
+}
+
+.right h1 {
+  padding: 20px;
+}
+
+.right > div > div#inputBox {
+  width: 450px;
+  height: 80px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow: auto;
+}
+.right > div > div#inputBox > div {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 5px;
+}
+
+.right > div > div#inputBox > input {
+  border: 0;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+}
+
+.right > div > div#inputBox > input:focus {
+  outline: 0;
+}
+
+.right > div > div#inputBox > span {
+  width: 100px;
+  height: 40px;
+  background-color: darkorange;
+  cursor: pointer;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item {
+  width: 450px;
+  height: 60px;
+  background-color: white;
+  margin: 5px 0;
+  list-style: none;
+  border-radius: 15px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.todo-item div.boxOfInput {
+  flex-grow: 1;
+}
+.todo-item input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  background-color: white;
+}
+.action-items {
+  display: flex;
+}
+.todo-item i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+.todo-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.todo-item button:hover {
+  color: black;
+}
+.done {
+  text-decoration: line-through;
+}
+
+.editbtn {
+  background-color: orange;
+}
+
+.deletebtn {
+  background-color: crimson;
+}
+
+.markbtn {
+  background-color: darkseagreen;
+}
+
+.okbtn {
+  background-color: black;
+}
