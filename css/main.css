@@ -23,33 +23,60 @@
   background: #555;
 }
 
+
+
 .container {
   min-height: 100vh;
   width: 100%;
   display: flex;
 }
+@media screen and (max-width: 830px) {
+  .container {
+    flex-flow: column;
+  }
+}
 
 .left {
-  width: 340px;
+  width: 270px;
   background-color: white;
-  min-height: 90vh;
-  border-radius: 20px 0 0 20px;
   display: flex;
   flex-flow: column;
   align-items: center;
   padding: 10px;
 }
+@media screen and (min-width: 830px) {
+  .left{
+    min-height: 100vh;
+  }
+}
+@media screen and (max-width: 830px) {
+  .left{
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
+  }
+}
 
 .right {
-  width: 100%;
-  height: 100vh;
   background-color: rgb(228, 228, 228);
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px;
-  overflow-y: scroll;
+}
+@media screen and (min-width: 830px) {
+  .right{
+    flex-grow: 1;
+    padding: 70px 30px;
+    overflow-y: scroll;
+    min-height: 100vh;
+  }
+}
+@media screen and (max-width: 830px) {
+  .right {
+    flex-grow: 1;
+    width: 100%;
+    min-height: 400px;
+  }
 }
 
 .myId {
@@ -57,10 +84,20 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  padding: 40px 0;
+  width: 100%;
+}
+@media screen and (min-width: 830px) {
+  .myId {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 830px) {
+  .myId {
+    padding: 10px 0;
+  }
 }
 
-.myId > div {
+.myId > div:nth-child(1) {
   border: 1px solid black;
   width: 50px;
   height: 50px;
@@ -68,13 +105,30 @@
   padding: 3px;
 }
 
-.myId > div > img {
+.myId > div:nth-child(1) > img {
   width: 100%;
   height: 100%;
 }
 
 .myId > span > h2 {
   font-size: 24px;
+}
+.myId > div:nth-child(3) {
+  height: 50px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.myId > div:nth-child(3) > img {
+  width: fit-content;
+  height: 100%;
+}
+
+@media screen and (min-width: 830px) {
+  .myId > div:nth-child(3) > img {
+    display: none
+  }
 }
 
 .line {
@@ -83,25 +137,55 @@
   background-color: darkolivegreen;
 }
 
-.left > h3 {
+@media screen and (min-width: 830px) {
+  .active {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .active {
+    display: none;
+  }
+}
+
+.left> div > h3 {
   font-size: 30px;
   width: 100%;
   padding: 20px 10px;
 }
 
-.left > ul {
+.left > div > ul {
   width: 100%;
   list-style: none;
   font-size: 18px;
   padding: 0 20px;
+  display: flex;
+}
+@media screen and (min-width: 830px) {
+  .left > div > ul {
+    flex-flow: column;
+  }
+}
+@media screen and (max-width: 830px) {
+  .left > div > ul {
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
 }
 
-.left > ul > li {
+.left > div > ul > li {
   display: flex;
   align-items: center;
   gap: 10px;
   line-height: 30px;
 }
+@media screen and (max-width: 830px) {
+  .left > div > ul > li {
+    width: 50%; 
+  }
+}
+
 .colorRed {
   width: 10px;
   height: 10px;
@@ -133,7 +217,6 @@
 }
 
 .right > div > div#inputBox {
-  width: 450px;
   height: 80px;
   background-color: white;
   border-radius: 15px;
@@ -143,6 +226,17 @@
   gap: 5px;
   overflow: auto;
 }
+@media screen and (min-width: 830px) {
+  .right > div > div#inputBox {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 830px) {
+  .right > div > div#inputBox {
+    width: 100%;
+  }
+}
+
 .right > div > div#inputBox > div {
   display: flex;
   width: fit-content;
@@ -173,7 +267,6 @@
 }
 
 .todo-item {
-  width: 450px;
   height: 60px;
   background-color: white;
   margin: 5px 0;
@@ -184,6 +277,17 @@
   align-items: center;
   gap: 5px;
 }
+@media screen and (min-width: 830px) {
+  .todo-item {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 830px) {
+  .todo-item {
+    width: 100%;
+  }
+}
+
 .todo-item div.boxOfInput {
   flex-grow: 1;
 }

@@ -110,3 +110,7 @@ inputBox.children[2].addEventListener("click", () => {
     alert("Can't add empty text");
   }
 });
+
+document.querySelector("#dots").addEventListener("click", ()=>{
+  document.querySelector("#forDots").classList.toggle("active")
+})
